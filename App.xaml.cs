@@ -1,12 +1,11 @@
-﻿namespace HelloApp
-{
-    public partial class App : Application
-    {
-        public App()
-        {
-            InitializeComponent();
+﻿namespace MetanitLessons;
 
-            MainPage = new ColorManagementPage();
-        }
+public partial class App : Application
+{
+    public App()
+    {
+        InitializeComponent();
+
+        MainPage = new EntryPage();
     }
 }

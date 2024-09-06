@@ -1,7 +1,6 @@
-using Java.Nio.Channels;
 using System.Runtime.CompilerServices;
 
-namespace HelloApp;
+namespace MetanitLessons;
 
 public class ColorManagementPage : ContentPage
 {

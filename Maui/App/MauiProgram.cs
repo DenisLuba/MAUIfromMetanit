@@ -1,12 +1,21 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace HelloApp;
+namespace MetanitLessons;
 
 public static class MauiProgram
 {
     public static MauiApp CreateMauiApp()
-        => MauiApp
-        .CreateBuilder()
-        .UseMauiApp<App>()
-        .Build();
+    {
+        var builder = MauiApp.CreateBuilder();
+        builder
+            .UseMauiApp<App>()
+            // добавление шрифтов
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                fonts.AddFont("Sahica.otf", "Sagica");
+            });
+        return builder.Build();
+    }
 }

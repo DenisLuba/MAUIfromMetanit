@@ -1,6 +1,6 @@
 using Microsoft.Maui.Layouts;
 
-namespace HelloApp;
+namespace MetanitLessons;
 
 
 /** AbsoluteLayoutFlags:

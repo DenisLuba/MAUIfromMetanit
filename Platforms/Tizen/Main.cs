@@ -2,7 +2,7 @@ using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using System;
 
-namespace HelloApp
+namespace MetanitLessons
 {
     internal class Program : MauiApplication
     {

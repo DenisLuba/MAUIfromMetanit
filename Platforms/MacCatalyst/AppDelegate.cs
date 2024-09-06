@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace HelloApp
+namespace MetanitLessons
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

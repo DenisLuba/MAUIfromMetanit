@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MetanitLessons.LabelPage"
+             Title="LabelPage">
+    <Grid>
+        <Label 
+            FontSize="22"
+            TextDecorations="Underline"
+            CharacterSpacing="2"
+            FontAttributes="Bold"
+            FontFamily="Helvetica"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Сегодня " FontSize="22" />
+                    <Span Text="хорошая" BackgroundColor="LightPink" TextColor="DarkRed" />
+                    <Span Text=" погода" FontAttributes="Bold" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Label HorizontalOptions="Center" VerticalOptions="Start" FontSize="16" BackgroundColor="LightBlue" >
+            <Label.Text>
+                <x:String>
+Его пример другим наука;
+Но, боже мой, какая скука
+С больным сидеть и день и ночь,
+Не отходя ни шагу прочь!
+                </x:String>
+            </Label.Text>
+        </Label>
+    </Grid>
+</ContentPage>

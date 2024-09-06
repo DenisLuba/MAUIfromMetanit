@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace HelloApp
+namespace MetanitLessons
 {
     public class Program
     {

@@ -1,4 +1,4 @@
-namespace HelloApp;
+namespace MetanitLessons;
 
 /**
  * Надо иметь в виду, что для iOS сверху надо отступать 20 единиц, 

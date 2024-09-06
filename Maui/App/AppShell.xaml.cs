@@ -1,4 +1,4 @@
-﻿namespace HelloApp
+﻿namespace MetanitLessons
 {
     public partial class AppShell : Shell
     {

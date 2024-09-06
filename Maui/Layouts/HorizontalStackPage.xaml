@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HelloApp.HorizontalStackPage"
+             x:Class="MetanitLessons.HorizontalStackPage"
              Title="HorizontalStackPage">
     <HorizontalStackLayout Spacing="8">
         <Label Text="First label" TextColor="Red"/>
