@@ -6,6 +6,6 @@ public partial class App : Application
     {
         InitializeComponent();
 
-        MainPage = new EditorPage();
+        MainPage = new BoxViewPage();
     }
 }
