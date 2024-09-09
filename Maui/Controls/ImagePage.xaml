@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MetanitLessons.ImagePage"
+             Title="ImagePage">
+    <StackLayout Padding="40">
+        
+        <Image Source="forest.jpg" />
+        
+        <Image>
+            <Image.Source>
+                <UriImageSource Uri="https://news.microsoft.com/wp-content/uploads/2014/12/452292672.jpg"
+                                CacheValidity="2:00:00.0" />
+            </Image.Source>
+        </Image>
+
+        <Grid RowDefinitions="*, *" ColumnDefinitions="*, *">
+            <Image Source="forest.jpg" Aspect="AspectFit" />
+            <Image Source="forest.jpg" Aspect="AspectFill" Grid.Column="1" Grid.Row="0" />
+            <Image Source="forest.jpg" Aspect="Fill" Grid.Column="0" Grid.Row="1" />
+            <Image Source="forest.jpg" Aspect="Center" Grid.Column="1" Grid.Row="1" />
+        </Grid>
+    </StackLayout>
+</ContentPage>

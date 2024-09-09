@@ -58,6 +58,7 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\Sahica.otf" />
+	  <None Remove="Resources\Images\forest.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -98,6 +99,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Maui\Controls\FontStylizationPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Maui\Controls\ImagePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Maui\Controls\LabelPage.xaml">
