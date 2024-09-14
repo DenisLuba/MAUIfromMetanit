@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MetanitLessons.TimePickerPage"
+             Title="TimePickerPage">
+    <VerticalStackLayout Padding="20">
+        <Label x:Name="labelXaml" Text="Выберите дату" FontSize="20" />
+        <TimePicker x:Name="timePickerXaml" Time="17:00:00" PropertyChanged="TimePickerPropertyChangedXaml" />
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MetanitLessons.StepperPage"
+             Title="StepperPage">
+    <HorizontalStackLayout>
+        <Stepper Minimum="0" Maximum="10" Increment="0.1" ValueChanged="OnStepperValueChangedXml" />
+        <Label x:Name="label" FontSize="18" Margin="8" />
+    </HorizontalStackLayout>
+</ContentPage>
