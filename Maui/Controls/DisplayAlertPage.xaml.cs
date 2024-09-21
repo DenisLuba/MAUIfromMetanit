@@ -1,3 +1,4 @@
+
 namespace MetanitLessons.Maui.Controls;
 
 /**
@@ -22,6 +23,35 @@ public partial class DisplayAlertPage : ContentPage
 {
 	public DisplayAlertPage()
 	{
-		InitializeComponent();
+		Button alertButton = new Button
+		{
+			Text = "Alert",
+			VerticalOptions = LayoutOptions.Start,
+			HorizontalOptions = LayoutOptions.Center,
+			Margin = new Thickness(0, 20)
+		};
+		alertButton.Clicked += AlertButtonClicked;
+
+		Content = alertButton;
 	}
+
+	private async void AlertButtonClicked(object? sender, EventArgs e)
+	{
+		bool result = await DisplayAlert("Confirm the action", "Do you want to delete the emlement?", "Yes", "No");
+		if (result)
+		{
+			await DisplayAlert("Notice", "You chose YES", "OK");
+		}
+		else
+		{
+			await DisplayAlert("Notice", "You chose NO", "Cancel");
+		}
+	}
+
+	//async void AlertButtonClicked(object? sender, EventArgs e)
+	//{
+	//	await DisplayAlert("Notice", "New message came", "OK");
+	//}
+
+
 }

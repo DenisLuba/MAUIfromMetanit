@@ -63,10 +63,11 @@ public partial class WebViewPage : ContentPage
 		//Content = webView;
 
 		// «¿√–”« ¿ ÀŒ ¿À‹Õ€’ HTML-‘¿…ÀŒ¬
-		//webView = new WebView();
-		//webView.Source = "index.html";
-		//Content = webView;
+		webView = new WebView();
+		webView.Source = "index.html";
+		Content = webView;
 
+		/*
 		// «¿√–”« ¿ WEB-—“–¿Õ»÷€
 		webView = new WebView
 		{
@@ -97,6 +98,8 @@ public partial class WebViewPage : ContentPage
 		grid.Add(webView, 0, 1);
 
 		Content = grid;
+
+		*/
 
 		//InitializeComponent();
 	}
