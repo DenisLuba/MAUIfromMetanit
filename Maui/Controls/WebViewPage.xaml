@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MetanitLessons.Maui.Controls.WebViewPage"
+             Title="WebViewPage">
+
+    <!--<WebView Source="https://metanit.com/" />-->
+
+    <!--<WebView>
+        <WebView.Source>
+            <HtmlWebViewSource>
+                <HtmlWebViewSource.Html>
+                    <![CDATA[
+                    <h1>Hello METANIT.COM</h1>
+                    <p>Hello .NET MAUI!<?p>
+                    ]]>
+                </HtmlWebViewSource.Html>
+            </HtmlWebViewSource>
+        </WebView.Source>
+    </WebView>-->
+
+    <WebView Source ="index.html" />
+</ContentPage>

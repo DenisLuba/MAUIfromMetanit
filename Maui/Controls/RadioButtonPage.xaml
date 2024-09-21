@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MetanitLessons.RadioButtonPage"
+             Title="RadioButtonPage">
+    <StackLayout Padding="12">
+        <VerticalStackLayout Margin="0, 0, 0, 20">
+            <Label x:Name="header" Text="Выберите язык программирования" />
+            <RadioButton GroupName="languages" Content="C#" IsChecked="True" />
+            <RadioButton GroupName="languages" Content="Java" />
+            <RadioButton GroupName="languages" Content="C++" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Margin="0, 0, 0, 20" RadioButtonGroup.GroupName="languages2">
+            <Label x:Name="header2" Text="Choose a programming language" />
+            <RadioButton Content="C#" Value="C#" CheckedChanged="OnLanguageCheckedChangedXaml" IsChecked="True"/>
+            <RadioButton Content="Java" Value="Java" CheckedChanged="OnLanguageCheckedChangedXaml" />
+            <RadioButton Content="C++" Value="C++" CheckedChanged="OnLanguageCheckedChangedXaml" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout RadioButtonGroup.GroupName="languagesWithIcons">
+            <Label x:Name="header3" Text="Choose a programming language" />
+            <RadioButton Value="C#" ControlTemplate="{x:Static RadioButton.DefaultTemplate}">
+                <RadioButton.Content>
+                    <Image Source="c_sharp_icon.png" WidthRequest="32" HeightRequest="32" HorizontalOptions="Start" Margin="8, 0, 0, 0"/>
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton Value="Java" ControlTemplate="{x:Static RadioButton.DefaultTemplate}">
+                <RadioButton.Content>
+                    <Image Source="java_icon.png" WidthRequest="44" HeightRequest="44" HorizontalOptions="Start" Margin="2, 0, 0, 0"/>
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton Value="C++" ControlTemplate="{x:Static RadioButton.DefaultTemplate}">
+                <RadioButton.Content>
+                    <Image Source="c_plus_plus_icon.png" WidthRequest="48" HeightRequest="48" HorizontalOptions="Start"/>
+                </RadioButton.Content>
+            </RadioButton>
+        </VerticalStackLayout>
+    </StackLayout>
+</ContentPage>

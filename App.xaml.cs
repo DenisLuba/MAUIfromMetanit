@@ -1,4 +1,6 @@
-﻿namespace MetanitLessons;
+﻿using MetanitLessons.Maui.Controls;
+
+namespace MetanitLessons;
 
 public partial class App : Application
 {
@@ -6,6 +8,6 @@ public partial class App : Application
     {
         InitializeComponent();
 
-        MainPage = new SliderPage();
+        MainPage = new WebViewPage();
     }
 }

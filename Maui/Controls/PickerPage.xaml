@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MetanitLessons.Maui.Controls.PickerPage"
+             Title="PickerPage">
+    <VerticalStackLayout Padding="8">
+        <Label x:Name="label" Text="Выберите язык" FontSize="18" />
+        <Picker x:Name="picker" Title="Язык программирования" SelectedIndexChanged="PickerSelected">
+            <Picker.Items>
+                <x:String>C#</x:String>
+                <x:String>JavaScript</x:String>
+                <x:String>Java</x:String>
+            </Picker.Items>
+        </Picker>
+    </VerticalStackLayout>
+</ContentPage>

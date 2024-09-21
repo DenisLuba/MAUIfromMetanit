@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MetanitLessons.SwitchAndCheckBoxPage"
+             Title="SwitchAndCheckBoxPage">
+    <VerticalStackLayout Padding="8">
+        <Switch x:Name="switcherXaml" IsToggled="True" Toggled="Switcher_Toggled_xaml" HorizontalOptions="Start"/>
+        <Label x:Name="labelXaml" FontSize="16" Text="Значение = True"/>
+        <BoxView HeightRequest="30" BackgroundColor="Transparent"/>
+        <Label x:Name="statusLabelXaml" FontSize="18" Text="Статус: холост/не замужем" />
+        <HorizontalStackLayout Padding="8">
+            <CheckBox x:Name="statusCheckBoxXaml" CheckedChanged="StatusCheckBox_CheckedChanged_xaml" />
+            <Label FontSize="16" Text="женат/замужем" />
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
