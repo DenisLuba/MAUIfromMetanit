@@ -1,4 +1,5 @@
 ﻿using MetanitLessons.Maui.Controls;
+using MetanitLessons.Maui.ResourcesAndStyles;
 
 namespace MetanitLessons;
 
@@ -8,6 +9,6 @@ public partial class App : Application
     {
         InitializeComponent();
 
-        MainPage = new ActivityIndicatorPage();
+        MainPage = new StylesPage();
     }
 }

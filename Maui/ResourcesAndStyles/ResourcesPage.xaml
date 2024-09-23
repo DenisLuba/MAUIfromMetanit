@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MetanitLessons.Maui.ResourcesAndStyles.ResourcesPage"
+             Title="ResourcesPage">
+    
+    <!--Ресурсы уровня приложения определяются в файле App.xaml-->
+    
+<!--Ресурсы уровня страницы-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="textColor">#004D40</Color>
+            <Color x:Key="backColor">#80CBCB</Color>
+            <x:Double x:Key="margin">12</x:Double>
+            
+<!--Этот цвет будет динамически изменяться при нажатии на 4 кнопку-->
+            <Color x:Key="button4BackColor">#197622</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout Padding="10" BackgroundColor="DarkBlue">
+        <!--Ресурсы уровня элемента StackLayout-->
+        <StackLayout.Resources>
+            <ResourceDictionary>
+                <Color x:Key="button3TextColor">#083382</Color>
+                <Color x:Key="button3BackColor">#F4F80F</Color>
+                <x:Double x:Key="button3Margin">24</x:Double>
+            </ResourceDictionary>
+        </StackLayout.Resources>
+        
+        <!--Используем ресурсы уровня страницы-->
+        <Button Text="iOS" 
+                TextColor="{StaticResource Key=textColor}"
+                BackgroundColor="{StaticResource Key=backColor}"
+                Margin="{StaticResource Key=margin}">
+        </Button>
+
+        <Button Text="Android"
+                TextColor="{StaticResource textColor}"
+                BackgroundColor="{StaticResource backColor}"
+                Margin="{StaticResource margin}">
+        </Button>
+
+        <!--Используем ресурсы уровня элемента StackLayout-->
+        <Button Text="Windows"
+                TextColor="{StaticResource button3TextColor}"
+                BackgroundColor="{StaticResource button3BackColor}"
+                Margin="{StaticResource button3Margin}">
+        </Button>
+        
+        <!--Используем ресурсы уровня приложения-->
+        <Button Text="Linux"
+                TextColor="{StaticResource appTextColor}"
+                BackgroundColor="{StaticResource appBackColor}"
+                Margin="{StaticResource appMargin}">
+        </Button>
+
+        <!--У этой кнопки поменяем цвет динамически при помощи клика-->
+        <!--Для динамически изменяемого цвета используем расширение DynamicResource-->
+        <Button Text="Change"
+                TextColor="White"
+                WidthRequest="120"
+                BackgroundColor="{DynamicResource button4BackColor}"
+                Clicked="ColorChange">
+        </Button>
+    </StackLayout>
+</ContentPage>
+    

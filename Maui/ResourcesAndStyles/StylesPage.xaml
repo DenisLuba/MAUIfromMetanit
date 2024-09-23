@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MetanitLessons.Maui.ResourcesAndStyles.StylesPage"
+             Title="StylesPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            
+            <x:Double x:Key="margin">20.0</x:Double>
+            
+            <Style x:Key="buttonStyleForPage" TargetType="Button">
+                <Setter Property="TextColor" Value="#F04D40" />
+                <!--Свойство может представлять сложный объект, например цвет из RGB-->
+                <Setter Property="BackgroundColor">
+                    <Setter.Value>
+                        <Color>
+                            <x:Arguments>
+                                <x:Int32>0</x:Int32>
+                                <x:Int32>75</x:Int32>
+                                <x:Int32>25</x:Int32>
+                            </x:Arguments>
+                        </Color>
+                    </Setter.Value>
+                </Setter>
+                <!--Также в качестве значения можно устанавливать ссылку на другой ресурс-->
+                <Setter Property="Margin" Value="{StaticResource Key=margin}" />
+            </Style>
+
+            <!--С помощью свойства BasedOn можно наследовать один стиль от другого-->
+            <Style x:Key="buttonStyleForPageChild" TargetType="Button" BasedOn="{StaticResource buttonStyleForPage}">
+                <Setter Property="WidthRequest" Value="150" />
+                <Setter Property="BackgroundColor" Value="LightCoral" />
+            </Style>
+
+            <!--Если нужно создать общий стиль для определенных элементов, то можно ключ не задавать-->
+            <!--Наследник может переопределять свойства базового стиля-->
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="#004D40" />
+                <Setter Property="Margin" Value="32" />
+                <Setter Property="FontSize" Value="24" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <VerticalStackLayout Padding="12">
+        <!--Можно использовать статическое или динамическое расширение (которое, можно будет изменить в коде)-->
+        <!--Свойство BackgroundColor в кнопке имеет приоритет перед общим стилем-->
+        <Button Text="iOS" Style="{StaticResource buttonStyleForPage}" BackgroundColor="LightBlue"/>
+        <Button Text="Android" Style="{DynamicResource buttonStyleForPageChild}" />
+        <!--Расширение не используется, т.к. создан общий стиль для Label-->
+        <Label Text="Label" />
+    </VerticalStackLayout>
+</ContentPage>
