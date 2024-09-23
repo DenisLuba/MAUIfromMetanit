@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MetanitLessons.Maui.ResourcesAndStyles.ExternalResourcesPage"
+             Title="ExternalResourcesPage">
+    
+    <!--Подключаем внешние ресурсы, которые мы создали-->
+    <ContentPage.Resources>
+        <ResourceDictionary Source="../../MyResources/GreenButtonStyle.xaml" />
+        <ResourceDictionary Source="../../MyResources/BlueButtonStyle.xaml" />
+    </ContentPage.Resources>
+    
+    <VerticalStackLayout Padding="20">
+        <Button Text="iOS" Style="{StaticResource blueButtonStyle}" />
+        <Button Text="Android" Style="{StaticResource greenButtonStyle}" />
+    </VerticalStackLayout>
+</ContentPage>
