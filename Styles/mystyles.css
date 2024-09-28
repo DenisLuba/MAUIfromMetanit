@@ -1,0 +1,29 @@
+^contentpage {
+	background-color: lightgray;
+}
+
+stacklayout {
+	padding: 20;
+}
+
+stacklayout label {
+	font-family: Verdana;
+	margin: 5;
+}
+
+#header {
+	font-size: 28;
+	font-weight: bold;
+	text-decoration: underline;
+	color: mediumvioletred
+}
+
+.english {
+	font-weight: bold;
+	font-size: 24;
+	color: blueviolet;
+}
+
+.russian {
+	font-size: 12;
+}

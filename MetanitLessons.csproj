@@ -188,6 +188,12 @@
 	  <MauiXaml Update="Maui\Layouts\StackLayoutPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Maui\ResourcesAndStyles\CSSstyleInCodePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Maui\ResourcesAndStyles\CSSstylePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Maui\ResourcesAndStyles\ResourcesPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -203,6 +209,10 @@
 	  <MauiXaml Update="MyResources\GreenButtonStyle.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Styles\" />
 	</ItemGroup>
 
 </Project>

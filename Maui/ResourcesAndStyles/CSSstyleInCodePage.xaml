@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MetanitLessons.Maui.ResourcesAndStyles.CSSstyleInCodePage"
+             Title="CSSstyleInCodePage">
+
+    <ContentPage.Resources>
+        <StyleSheet>
+            <![CDATA[
+                ^contentpage {
+                    background-color: lightcyan
+                }
+            
+                stacklayout {
+                    margin: 15;
+                    padding: 10;
+                }
+            
+                .labelClass {
+                    text-size: 44;
+                    font-weight: bold;  
+                    color: blueviolet;
+                }
+            ]]>
+        </StyleSheet>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Label 
+            StyleClass="labelClass"
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+    </StackLayout>
+</ContentPage>

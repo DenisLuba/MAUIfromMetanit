@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MetanitLessons.Maui.ResourcesAndStyles.CSSstylePage"
+             Title="CSSstylePage">
+
+    <!--Создали свой CSS-стиль в указанной папке относительно корня проекта. Используем его-->
+    <ContentPage.Resources>
+        <StyleSheet Source="/Styles/mystyles.css" />
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Label x:Name="header" StyleId="header" Text="Words" />
+        <Label Text="apple" StyleClass="english" />
+        <Label Text="яблоко" StyleClass="russian" />
+        <Label Text="house" StyleClass="english" />
+        <Label Text="дом" StyleClass="russian" />
+        <Label Text="bread" StyleClass="english" />
+        <Label Text="хлеб" StyleClass="russian" />
+    </StackLayout>
+</ContentPage>
