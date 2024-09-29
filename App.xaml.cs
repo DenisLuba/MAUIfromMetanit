@@ -9,6 +9,6 @@ public partial class App : Application
     {
         InitializeComponent();
 
-        MainPage = new CSSstyleInCodePage();
+        MainPage = new VisualStateManagerPage();
     }
 }
