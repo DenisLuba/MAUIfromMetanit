@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MetanitLessons.Maui.Bindings.BindingPage"
+             Title="BindingPage">
+    <VerticalStackLayout>
+<!--Свойству BindingContext задается значение источника привязки при помощи расширения x:Reference-->
+<!--x:Reference - расширение, которому передается имя элемента источника привязки (entryBox1)-->
+<!--Свойству Text цели привязки (Label) присваивается свойство Text источника привязки (Entry) с помощью расширения Binding-->
+        <Label BindingContext="{x:Reference entryBox1}" Text="{Binding Text}" />
+        <Entry x:Name="entryBox1" />
+        
+<!--Другой способ создания привязки-->
+<!--В свойстве Text цели привязки Label установлено значение с расширением Binding.
+    Для расширения Binding устанавливается источник (с помощью x:Reference - entryBox2)
+    и путь - свойство источника (Text), изменение которого будет отслеживаться-->
+        <Label x:Name="label2" Text="{Binding Source={x:Reference entryBox2}, Path=Text}" />
+        <Entry x:Name="entryBox2" />
+    </VerticalStackLayout>
+</ContentPage>
