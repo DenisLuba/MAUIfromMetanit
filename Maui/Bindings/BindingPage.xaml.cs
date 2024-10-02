@@ -16,7 +16,7 @@ public partial class BindingPage : ContentPage
 		// Связываем свойства цели Label (BindableProperty - TextProperty) и источника Entry (Text)
 		label1.SetBinding(Label.TextProperty, "Text");
 
-		/********************************************************************************************/
+/********************************************************************************************/
 
 		// Другой способ привязки - объект Binding
 
