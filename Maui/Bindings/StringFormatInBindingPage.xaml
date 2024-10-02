@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MetanitLessons.Maui.Bindings.StringFormatInBindingPage"
+             Title="StringFormatInBindingPage">
+    
+    <VerticalStackLayout Padding="20">
+        
+        <Entry x:Name="myEntry" />
+        <Label BindingContext="{x:Reference Name=myEntry}" 
+               Text="{Binding Path=Text, StringFormat='Сообщение: {0}'}" />
+
+        <Entry x:Name="myEntry2" />
+        <Label Text="{Binding Source={x:Reference Name=myEntry2}, Path=Text, StringFormat='Сообщение 2: {0}'}" />
+
+    </VerticalStackLayout>
+</ContentPage>
