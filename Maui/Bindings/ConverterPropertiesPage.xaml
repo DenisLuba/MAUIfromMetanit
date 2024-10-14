@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MetanitLessons.Maui.Bindings"
+             x:Class="MetanitLessons.Maui.Bindings.ConverterPropertiesPage"
+             Title="ConverterPropertiesPage">
+    <VerticalStackLayout Padding="20">
+        
+        <Entry x:Name="entry_xml" />
+        <Label>
+            <Label.Text>
+                <Binding Source="{x:Reference Name=entry_xml}" Path="Text">
+                    <Binding.Converter>
+                        <local:StringToStatusConverter ApprovedStatus="Доступ разрешен" DeniedStatus="Доступ отклонен" />
+                    </Binding.Converter>
+                </Binding>
+            </Label.Text>
+        </Label>
+
+        <Entry x:Name="entry2_xml" />
+        <Label>
+            <Label.Style>
+                <Binding Source="{x:Reference Name=entry2_xml}" Path="Text">
+                    <Binding.Converter>
+                        <local:StringToStyleConverter>
+                            <local:StringToStyleConverter.ApprovedStatus>
+                                <Style TargetType="Label">
+                                    <Setter Property="Text" Value="Доступ разрешен" />
+                                    <Setter Property="TextColor" Value="Green" />
+                                </Style>
+
+                            </local:StringToStyleConverter.ApprovedStatus>
+
+                            <local:StringToStyleConverter.DeniedStatus>
+                                <Style TargetType="Label">
+                                    <Setter Property="Text" Value="Доступ отклонен" />
+                                    <Setter Property="TextDecorations" Value="Underline" />
+                                    <Setter Property="TextColor" Value="Red" />
+                                </Style>
+                            </local:StringToStyleConverter.DeniedStatus>
+                        </local:StringToStyleConverter>
+                    </Binding.Converter>
+                </Binding>
+            </Label.Style>
+        </Label>
+
+        <Entry x:Name="entry3_xml" />
+        <Label>
+            <Label.Text>
+                <Binding Source="{x:Reference Name=entry3_xml}" Path="Text" ConverterParameter="euro">
+                    <Binding.Converter>
+                        <local:StringToCurrencyConverter />
+                    </Binding.Converter>
+                </Binding>
+            </Label.Text>
+        </Label>
+        <Label>
+            <Label.Text>
+                <Binding Source="{x:Reference Name=entry3_xml}" Path="Text" ConverterParameter="dollar">
+                    <Binding.Converter>
+                        <local:StringToCurrencyConverter />
+                    </Binding.Converter>
+                </Binding>
+            </Label.Text>
+        </Label>
+    </VerticalStackLayout>
+</ContentPage>

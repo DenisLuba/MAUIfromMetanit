@@ -10,6 +10,6 @@ public partial class App : Application
     {
         InitializeComponent();
 
-        MainPage = new StringFormatInBindingPage();
+        MainPage = new ConverterPropertiesPage();
     }
 }
