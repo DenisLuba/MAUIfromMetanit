@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MetanitLessons.Maui.Bindings"
+             x:Class="MetanitLessons.Maui.Bindings.INotifyPropertyChangedPage"
+             Title="INotifyPropertyChangedPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:Person x:Key="person" Name="Tom" Age="38" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <!-- Задаем Person в качестве статического ресурса -->
+    <!-- Затем мы можем задаеть его как контекст для всего элемента VerticalStackLayout -->
+    <VerticalStackLayout Padding="20" BindingContext="{StaticResource person}">
+        <Label Text="Name" />
+        <!-- В отдельных элементах можно прописать привязку к свойствам контекста Person -->
+        <Label Text="{Binding Path=Name}" FontAttributes="Bold" />
+        <Label Text="Age" />
+        <Label Text="{Binding Path=Age}" FontAttributes="Bold" />
+        <Button Text="+" WidthRequest="60" HorizontalOptions="Start" Clicked="UpdateAge" />
+    </VerticalStackLayout>
+</ContentPage>

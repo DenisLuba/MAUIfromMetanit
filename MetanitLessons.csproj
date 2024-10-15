@@ -101,6 +101,9 @@
 	  <MauiXaml Update="Maui\Bindings\CustomBindablePropertyPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Maui\Bindings\INotifyPropertyChangedPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Maui\Bindings\StringFormatInBindingPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
