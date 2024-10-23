@@ -1,6 +1,5 @@
-﻿using MetanitLessons.Maui.Controls;
-using MetanitLessons.Maui.ResourcesAndStyles;
-using MetanitLessons.Maui.Bindings;
+﻿using MetanitLessons.Maui.Bindings;
+using MetanitLessons.Maui.Triggers;
 
 namespace MetanitLessons;
 
@@ -10,6 +9,6 @@ public partial class App : Application
     {
         InitializeComponent();
 
-        MainPage = new INotifyPropertyChangedPage();
+        MainPage = new DataTriggersPage();
     }
 }
