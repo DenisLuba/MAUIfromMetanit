@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MetanitLessons.Maui.ListViews.ListViewPage"
+             Title="ListViewPage">
+<!-- Данные в виде ресурса -->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Array x:Key="people" Type="{x:Type x:String}">
+                <x:String>IPhone</x:String>
+                <x:String>Samsung</x:String>
+                <x:String>Huawei</x:String>
+                <x:String>Honor</x:String>
+            </x:Array>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <VerticalStackLayout Padding="8">
+        <Label Text="Смартфоны" />
+<!-- В ListView ссылаемся на ресурс -->
+        <ListView ItemsSource="{StaticResource people}" Margin="0, 0, 0, 16"/>
+
+        <Label Text="Список пользователей" />
+        <!-- Данные внутри ListView -->
+        <ListView Margin="0, 0, 0, 16">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Tom</x:String>
+                    <x:String>Bob</x:String>
+                    <x:String>Sam</x:String>
+                    <x:String>Alice</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+        </ListView>
+        
+<!-- Данные из кода -->
+        <Label Text="Товары"/>
+        <ListView ItemsSource="{Binding Goods}" />
+
+    </VerticalStackLayout>
+</ContentPage>

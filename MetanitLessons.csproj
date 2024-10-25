@@ -86,6 +86,9 @@
 	  <Compile Update="Maui\Layouts\StackLayoutPage.xaml.cs">
 	    <DependentUpon>StackLayoutPage.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Maui\ListViews\BindingToSelectedItemPage.xaml.cs">
+	    <DependentUpon>BindingToSelectedItemPage.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -102,6 +105,15 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Maui\Bindings\INotifyPropertyChangedPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Maui\ListViews\BindingToSelectedItemPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Maui\ListViews\ItemTappedSelectedPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Maui\ListViews\ListViewPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Maui\Triggers\MultiTriggerPage.xaml">
