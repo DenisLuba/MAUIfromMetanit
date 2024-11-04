@@ -63,6 +63,7 @@
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\Sahica.otf" />
 	  <None Remove="Resources\Images\forest.jpg" />
+	  <None Remove="Resources\Images\python_icon.svg" />
 	  <None Remove="Resources\raw\forestamp.jpg" />
 	</ItemGroup>
 
@@ -110,16 +111,28 @@
 	  <MauiXaml Update="Maui\ListViews\BindingToSelectedItemPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Maui\ListViews\CustomCellPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Maui\ListViews\DataTemplatePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Maui\ListViews\DataTemplateTappedSelected.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Maui\ListViews\ImageCellPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Maui\ListViews\ItemTappedSelectedPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Maui\ListViews\ListViewPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Maui\ListViews\TextCellPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Maui\ListViews\ViewCellPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Maui\Triggers\MultiTriggerPage.xaml">

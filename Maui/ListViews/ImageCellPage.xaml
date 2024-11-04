@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MetanitLessons.Maui.ListViews"
+             x:Class="MetanitLessons.Maui.ListViews.ImageCellPage"
+             Title="ImageCellPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Array x:Key="languages" Type="{x:Type local:Language}">
+                <local:Language Name="C#" ImagePath="c_sharp_icon.svg" Description="Последняя версия C# 12" />
+                <local:Language Name="Java" ImagePath="java_icon.svg" Description="Последняя версия Java 19" />
+                <local:Language Name="Python" ImagePath="python_icon.svg" Description="Последняя версия Python 3.11" />
+                <local:Language Name="C++" ImagePath="c_plus_plus_icon.svg" Description="Последняя версия C++ 23" />
+            </x:Array>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout Padding="8">
+        <Label Text="Языки программирования" FontSize="18" TextColor="#004D40" />
+
+        <ListView ItemsSource="{StaticResource languages}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell
+                        ImageSource="{Binding ImagePath}"
+                        Text="{Binding Name}"
+                        Detail="{Binding Description}"
+                        TextColor="#004D40"
+                        DetailColor="#26A69A" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

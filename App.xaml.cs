@@ -1,6 +1,4 @@
-﻿using MetanitLessons.Maui.Bindings;
-using MetanitLessons.Maui.Triggers;
-using MetanitLessons.Maui.ListViews;
+﻿using MetanitLessons.Maui.ListViews;
 
 namespace MetanitLessons;
 
@@ -10,6 +8,6 @@ public partial class App : Application
     {
         InitializeComponent();
 
-        MainPage = new DataTemplateTappedSelected();
+        MainPage = new CustomCellPage();
     }
 }
