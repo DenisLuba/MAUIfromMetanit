@@ -39,7 +39,7 @@ class ProgrammingLanguage
 	public string ImagePath { get; set; } = "";
 }
 
-public class CustomCell : ViewCell
+class CustomCell : ViewCell
 {
 	Label titleLabelCS, detailLabelCS;
 	Image image;
