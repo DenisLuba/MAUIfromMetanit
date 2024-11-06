@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MetanitLessons.Maui.ListViews.GroupingListViewPage"
+             Title="GroupingListViewPage">
+    <VerticalStackLayout Padding="8">
+        <!-- GroupDisplayBinding задает значение, которое будет отображаться для каждой группы -->
+        <!-- IsGroupingEnabled - добавляет поддержку групп для ListView -->
+        <!-- ItemsSource - привязка идет к UserGroups, которое содержит группы -->
+        <ListView 
+                GroupDisplayBinding="{Binding Name}"
+                ItemsSource="{Binding UserGroups}"
+                IsGroupingEnabled="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label Text="{Binding Name}" />
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!-- С помощью свойства GroupHeaderTemplate можно настроить шаблон отображения заголовков групп -->
+        <!-- для каждого заголовка группы свое Name, которое относится к Grouping -->
+        <ListView ItemsSource="{Binding UserGroups}" IsGroupingEnabled="True">
+            <ListView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label Text="{Binding Name}"
+                               BackgroundColor="LightGray"
+                               FontSize="18"
+                               FontAttributes="Bold" />
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.GroupHeaderTemplate>
+
+            <!-- для каждого Item свое Name, которое относится к User -->
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label Text="{Binding Name}" />
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </VerticalStackLayout>
+</ContentPage>

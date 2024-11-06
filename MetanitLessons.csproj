@@ -120,6 +120,9 @@
 	  <MauiXaml Update="Maui\ListViews\DataTemplateTappedSelected.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Maui\ListViews\GroupingListViewPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Maui\ListViews\HeaderFooterListViewPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
