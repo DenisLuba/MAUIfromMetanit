@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- VIEW -->
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MetanitLessons.Maui.MVVM.MVVMbasePage"
+             Title="MVVMbasePage">
+    
+    <VerticalStackLayout Padding="4">
+
+        <Label Text="Name" />
+
+        <Label Text="{Binding Name}" FontAttributes="Bold" />
+
+        <Label Text="Age" />
+
+        <Label Text="{Binding Age}" FontAttributes="Bold" />
+    </VerticalStackLayout>
+</ContentPage>

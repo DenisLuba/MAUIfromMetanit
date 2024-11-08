@@ -147,6 +147,12 @@
 	  <MauiXaml Update="Maui\ListViews\ViewCellPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Maui\MVVM\CommandPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Maui\MVVM\MVVMbasePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Maui\Triggers\MultiTriggerPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

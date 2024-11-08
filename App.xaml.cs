@@ -1,4 +1,5 @@
 ﻿using MetanitLessons.Maui.ListViews;
+using MetanitLessons.Maui.MVVM;
 
 namespace MetanitLessons;
 
@@ -8,6 +9,6 @@ public partial class App : Application
     {
         InitializeComponent();
 
-        MainPage = new GroupingListViewPage();
+        MainPage = new CommandPage();
     }
 }
