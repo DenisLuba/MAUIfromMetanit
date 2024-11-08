@@ -1,7 +1,7 @@
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Windows.Input;
+using System.Collections.ObjectModel; // ObservableCollection
+using System.ComponentModel; // INotifyPropertyChanged
+using System.Runtime.CompilerServices; // CallerMemberName
+using System.Windows.Input; // ICommand
 
 namespace MetanitLessons.Maui.MVVM;
 
@@ -25,6 +25,16 @@ public class MainViewModel : INotifyPropertyChanged
 	int age;
 	public event PropertyChangedEventHandler? PropertyChanged;
 	// ICommand нужен для взаимодействия с пользователем
+	/*
+		
+		public interface ICommand
+		{
+			void Execute(object? args); -	выполняет команду
+			bool CanExecute(object? arg); - может ли команда быть выполнена
+			event EventHandler? CanExecuteChanged; - генерируется при изменениях, которые могут повлиять на выполнение команды
+		}
+
+	 */
 	public ICommand AddCommand { get; set; }
 	// коллекция "прослушивающая" изменения
 	public ObservableCollection<User> Users { get; } = new();
@@ -70,7 +80,7 @@ public class MainViewModel : INotifyPropertyChanged
 		/*
 		public Command(Action execute)
 
-		Делегат Action представляет выполняемое командой действие
+		Делегат Action представляет выполняемое командой действие - реализация метода Execute()
 		 */
 	}
 
