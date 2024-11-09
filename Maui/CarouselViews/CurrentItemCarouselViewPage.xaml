@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MetanitLessons.Maui.CarouselViews"
+             x:Class="MetanitLessons.Maui.CarouselViews.CurrentItemCarouselViewPage"
+             Title="CurrentItemCarouselViewPage">
+
+    <VerticalStackLayout Padding="8">
+
+        <!-- CarouselView.CurrentItem позволяет получить текущий отображаемый элемент -->
+        <Label 
+            Text="{Binding Source={x:Reference Name=carouselView}, Path=CurrentItem.Name}"
+            FontSize="18"/>
+
+        <!-- событие CarouselView.CurrentItemChanged отслеживает выбор нового элемента -->
+        <!-- команда CurrentChangedCommand выполняется при выборе элемента -->
+        <!-- параметр CurrentItem (т.е. объект класса Product) передается в команду при помощи CurrentChangedCommandParameter -->
+        <CarouselView 
+            x:Name="carouselView" 
+            CurrentItemChanged="carouselViewCurrentItemChanged"
+            CurrentItemChangedCommand="{Binding SelectCommand}"
+            CurrentItemChangedCommandParameter="{Binding Source={RelativeSource Mode=Self}, Path=CurrentItem}">
+            <CarouselView.ItemsSource>
+                <x:Array Type="{x:Type local:Product}">
+                    <local:Product Name="Huawei" Description="Цена 59000" ImagePath="huawei.png" />
+                    <local:Product Name="iPhone" Description="Цена 60000" ImagePath="iphone.png" />
+                    <local:Product Name="Samsung" Description="Цена 65000" ImagePath="samsung.png" />
+                    <local:Product Name="Honor" Description="Цена 45000" ImagePath="honor.png" />
+                </x:Array>
+            </CarouselView.ItemsSource>
+
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Frame>
+                        <VerticalStackLayout>
+                            
+                            <Label 
+                                   Text="{Binding Name}" 
+                                   FontAttributes="Bold" 
+                                   FontSize="18"
+                                   HorizontalTextAlignment="Center" />
+
+                            <Image
+                                    WidthRequest="150"
+                                    HeightRequest="150"
+                                    Source="{Binding ImagePath}" />
+
+                            <Label Text="{Binding Description}" HorizontalTextAlignment="Center" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+        <Label x:Name="label" FontSize="14" />
+
+        <Label x:Name="footer" FontSize="12" />
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MetanitLessons.Maui.CarouselViews"
+             x:Class="MetanitLessons.Maui.CarouselViews.CustomCurrentItemChangedCarouselViewPage"
+             Title="CustomCurrentItemChangedCarouselViewPage">
+
+    <CarouselView x:Name="carouselView" VerticalOptions="Start">
+        
+        <CarouselView.ItemsSource>
+            <x:Array Type="{x:Type local:Product}">
+                <local:Product Name="Huawei" Description="Цена 59000" ImagePath="huawei.png" />
+                <local:Product Name="iPhone" Description="Цена 60000" ImagePath="iphone.png" />
+                <local:Product Name="Samsung" Description="Цена 65000" ImagePath="samsung.png" />
+                <local:Product Name="Honor" Description="Цена 45000" ImagePath="honor.png" />
+            </x:Array>
+        </CarouselView.ItemsSource>
+
+        <CarouselView.ItemTemplate>
+            <DataTemplate>
+                <Frame>
+                    <VerticalStackLayout>
+
+                        <Label 
+                            Text="{Binding Name}" 
+                            FontAttributes="Bold" 
+                            FontSize="18" 
+                            HorizontalTextAlignment="Center"/>
+
+                        <Image
+                            Source="{Binding ImagePath}"
+                            WidthRequest="150"
+                            HeightRequest="150" />
+
+                        <Label
+                            Text="{Binding Description}"
+                            HorizontalTextAlignment="Center" />
+                    </VerticalStackLayout>
+
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding Source={x:Reference Name=carouselView}, Path=BindingContext.SelectCommand}"
+                            CommandParameter="{Binding}" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </DataTemplate>
+        </CarouselView.ItemTemplate>
+    </CarouselView>
+</ContentPage>

@@ -1,5 +1,6 @@
 ﻿using MetanitLessons.Maui.ListViews;
 using MetanitLessons.Maui.MVVM;
+using MetanitLessons.Maui.CarouselViews;
 
 namespace MetanitLessons;
 
@@ -9,6 +10,6 @@ public partial class App : Application
     {
         InitializeComponent();
 
-        MainPage = new MultipleViewModelsPage();
+        MainPage = new CustomCurrentItemChangedCarouselViewPage();
     }
 }

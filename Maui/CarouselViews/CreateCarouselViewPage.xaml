@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MetanitLessons.Maui.CarouselViews"
+             x:Class="MetanitLessons.Maui.CarouselViews.CreateCarouselViewPage"
+             Title="CreateCarouselViewPage">
+
+    <VerticalStackLayout>
+        <CarouselView IndicatorView="indicatorView">
+
+            <!-- По умолчанию ориентация - горизонтальная -->
+            <CarouselView.ItemsLayout>
+                <LinearItemsLayout Orientation="Horizontal" />
+            </CarouselView.ItemsLayout>
+
+            <CarouselView.ItemsSource>
+                <x:Array Type="{x:Type local:Product}">
+                    <local:Product Name="Huawei" Description="Цена 59000" ImagePath="huawei.png" />
+                    <local:Product Name="iPhone" Description="Цена 60000" ImagePath="iphone.png" />
+                    <local:Product Name="Samsung" Description="Цена 65000" ImagePath="samsung.png" />
+                    <local:Product Name="Honor" Description="Цена 45000" ImagePath="honor.png" />
+                </x:Array>
+            </CarouselView.ItemsSource>
+
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10">
+                        <Frame CornerRadius="20" HasShadow="True">
+
+                            <Frame.Shadow>
+                                <Shadow 
+                            Brush="Black"
+                            Offset="15, 15"
+                            Opacity="0.3" />
+                            </Frame.Shadow>
+
+                            <VerticalStackLayout>
+
+                                <Label 
+                            Text="{Binding Name}" 
+                            FontAttributes="Bold" 
+                            FontSize="18" 
+                            HorizontalTextAlignment="Center" />
+
+                                <Image
+                            WidthRequest="150"
+                            HeightRequest="150"
+                            Source="{Binding ImagePath}" />
+
+                                <Label
+                            Text="{Binding Description}"
+                            HorizontalTextAlignment="Center" />
+
+                            </VerticalStackLayout>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+        <IndicatorView 
+            x:Name="indicatorView"
+            Margin="0, 10, 0, 0"
+            SelectedIndicatorColor="DarkGray"
+            HorizontalOptions="Center" />
+
+    </VerticalStackLayout>
+</ContentPage>
