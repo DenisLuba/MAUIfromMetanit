@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MetanitLessons.Maui.CollectionViews"
+             x:Class="MetanitLessons.Maui.CollectionViews.HorizontalLinearCollectionViewPage"
+             Title="HorizontalLinearCollectionViewPage">
+
+    <CollectionView>
+        <!-- ItemsLayout - направление списка, ItemSpacing - отступы между элементами -->
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout Orientation="Horizontal" ItemSpacing="20" />
+        </CollectionView.ItemsLayout>
+        
+        <CollectionView.ItemsSource>
+            <x:Array Type="{x:Type local:User}">
+                <local:User Name="Tom" Age="38" Company="Microsoft" />
+                <local:User Name="Sam" Age="25" Company="Google"/>
+                <local:User Name="Bob" Age="42" Company="JetBrains"/>
+                <local:User Name="Alice" Age="33" Company="Microsoft"/>
+                <local:User Name="Kate" Age="29" Company="Google"/>
+                <local:User Name="Amelia" Age="35" Company="JetBrains" />
+            </x:Array>
+        </CollectionView.ItemsSource>
+
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout Margin="10">
+                    <Label Text="{Binding Name}" FontSize="20" TextColor="#006064" Margin="10" />
+                    <Label Text="{Binding Age, StringFormat='Возраст: {0}'}" />
+                    <Label Text="{Binding Company}" />
+                </StackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+        
+    </CollectionView>
+</ContentPage>
