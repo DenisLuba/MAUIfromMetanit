@@ -11,6 +11,6 @@ public partial class App : Application
     {
         InitializeComponent();
 
-        MainPage = new HorozontalGridCollectionViewPage();
+        MainPage = new SelectedItemViewModelCollectionViewPage();
     }
 }

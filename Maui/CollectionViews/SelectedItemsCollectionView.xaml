@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MetanitLessons.Maui.CollectionViews"
+             x:Class="MetanitLessons.Maui.CollectionViews.SelectedItemsCollectionView"
+             Title="SelectedItemsCollectionView">
+
+    <StackLayout>
+        
+        <Label 
+            FontSize="18" 
+            Margin="5"
+            Text=
+            "{
+                Binding Source={x:Reference collectionViewXaml}, 
+                Path=SelectedItem.Name,
+                StringFormat='Selected: {0}'
+            }" />
+
+        <Label x:Name="selectedLabelXaml" FontSize="18" Margin="5" />
+
+        <CollectionView 
+            x:Name="collectionViewXaml" 
+            SelectionMode="Single"
+            SelectionChanged="OnCollectionViewSelectionChanged">
+
+            <CollectionView.ItemsSource>
+                <x:Array Type="{x:Type local:User}">
+                    <local:User Name="Tom" Age="38" Company="Microsoft" />
+                    <local:User Name="Sam" Age="25" Company="Google"/>
+                    <local:User Name="Bob" Age="42" Company="JetBrains"/>
+                    <local:User Name="Alice" Age="33" Company="Microsoft"/>
+                    <local:User Name="Kate" Age="29" Company="Google"/>
+                    <local:User Name="Amelia" Age="35" Company="JetBrains" />
+                </x:Array>
+            </CollectionView.ItemsSource>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Margin="8">
+                        <Label Text="{Binding Name}" FontSize="20" TextColor="#006064" />
+                        <Label Text="{Binding Age, StringFormat='Возраст: {0}'}" />
+                        <Label Text="{Binding Company}" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

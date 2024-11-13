@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MetanitLessons.Maui.CollectionViews"
+             x:Class="MetanitLessons.Maui.CollectionViews.MultipleSelectedCollectionViewPage"
+             Title="MultipleSelectedCollectionViewPage">
+    
+    <VerticalStackLayout>
+
+        <Label x:Name="multipleSelectedLabel" FontSize="18" Margin="6" />
+
+        <CollectionView x:Name="collectionView" SelectionMode="Multiple"
+                        SelectionChangedCommand="{Binding SelectCommand}"
+                        SelectionChangedCommandParameter="{Binding Source={RelativeSource Self}, Path=SelectedItems}">
+
+            <CollectionView.ItemsSource>
+                <x:Array Type="{x:Type local:User}">
+                    <local:User Name="Kris" Age="22" Company="Microsoft" />
+                    <local:User Name="Tom" Age="38" Company="Microsoft" />
+                    <local:User Name="Sam" Age="25" Company="Google"/>
+                    <local:User Name="Bob" Age="42" Company="JetBrains"/>
+                    <local:User Name="Alice" Age="33" Company="Microsoft"/>
+                    <local:User Name="Kate" Age="29" Company="Google"/>
+                    <local:User Name="Amelia" Age="35" Company="JetBrains" />
+                </x:Array>
+            </CollectionView.ItemsSource>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Label Text="{Binding Name}" FontSize="20" TextColor="#006064" />
+                        <Label Text="{Binding Age, StringFormat='Возраст: {0}'}" />
+                        <Label Text="{Binding Company}" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>
