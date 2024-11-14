@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MetanitLessons.Maui.CollectionViews.GroupingCollectionViewPage"
+             Title="GroupingCollectionViewPage">
+    
+    <VerticalStackLayout>
+        <CollectionView ItemsSource="{Binding UsersGroups}" IsGrouped="True" Margin="8">
+
+            <CollectionView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <!-- Grouping.Name (т.е. Company) -->
+                    <Label Text="{Binding Name}" FontSize="22" TextColor="#006064" />
+
+                </DataTemplate>
+            </CollectionView.GroupHeaderTemplate>
+
+            <CollectionView.GroupFooterTemplate>
+                <DataTemplate>
+                    <!-- ObservableCollection.Count группы из объектов User класса Grouping -->
+                    <Label Text="{Binding Count, StringFormat='Total employees: {0:D}'}" Margin="0,0,0,10" />
+                    
+                </DataTemplate>
+            </CollectionView.GroupFooterTemplate>
+            
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="8">
+                        <!-- здесь уже User.Name, т.к. ItemTemplate ссылается на элемент коллекции User -->
+                        <Label Text="{Binding Name}" />
+
+                        <Label Text="{Binding Age, StringFormat='Возраст: {0}'}" />
+                        
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

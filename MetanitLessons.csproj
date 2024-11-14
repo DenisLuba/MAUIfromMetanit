@@ -123,6 +123,9 @@
 	  <MauiXaml Update="Maui\CollectionViews\CommandCollectionViewPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Maui\CollectionViews\GroupingCollectionViewPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Maui\CollectionViews\HorizontalLinearCollectionViewPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
