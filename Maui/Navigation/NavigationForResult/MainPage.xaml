@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MetanitLessons.Maui.Navigation.NavigationForResult"
+             x:Class="MetanitLessons.Maui.Navigation.NavigationForResult.MainPage"
+             Title="Список пользователей">
+    
+    <VerticalStackLayout>
+
+        <Button Text="Добавить" Clicked="AddButtonClick" />
+
+        <!-- в MainPage.xaml.cs для peopleList.BindingContext установлен на список People -->
+        <ListView x:Name="peopleList" ItemsSource="{Binding}" ItemSelected="OnListViewItemSelected">
+            <!-- В загловке будет 2 столбца - это будет заголовок таблицы -->
+            <ListView.Header>
+                <Grid BackgroundColor="#ddd">
+                    <!-- Описание 2 столбцов с пропорциональной шириной 50% на 50% -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    
+                    <!-- Содержание столбцов таблицы -->
+                    <!-- 1 столбец - Имя -->
+                    <Label Text="Имя" FontSize="16" Grid.Column="0" />
+                    <!-- 2 столбец - Возраст -->
+                    <Label Text="Возраст" FontSize="16" Grid.Column="1" />
+                </Grid>
+            </ListView.Header>
+            <!-- Шаблон каждого элемента ListView, т.е. каждой строки.
+            Получится таблица - в каждой строке - 2 столбца -->
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Grid>
+                                <!-- Описание 2 столбцов с пропорциональной шириной 50% на 50% -->
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                
+                                <!-- в 1 столбец будет записываться имя объекта Person из списка -->
+                                <Label Text="{Binding Name}" FontSize="16" Grid.Column="0" />
+                                <!-- во 2 столбец будет записываться возраст объекта Person из списка -->
+                                <Label Text="{Binding Age}" FontSize="16" Grid.Column="1" />
+                            </Grid>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </VerticalStackLayout>
+</ContentPage>

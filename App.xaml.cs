@@ -13,7 +13,7 @@ public partial class App : Application
     {
         InitializeComponent();
 
-        MainPage = new NavigationPage(new Maui.Navigation.StackNavigation.MainPage())
+        MainPage = new NavigationPage(new Maui.Navigation.NavigationForResult.MainPage())
         {
             BarBackgroundColor = Color.FromArgb("#2980B9"),
             BarTextColor = Colors.White

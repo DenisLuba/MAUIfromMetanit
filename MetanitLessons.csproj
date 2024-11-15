@@ -201,6 +201,12 @@
 	  <MauiXaml Update="Maui\MVVM\MVVMbasePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Maui\Navigation\NavigationForResult\MainPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Maui\Navigation\NavigationForResult\PersonPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Maui\Triggers\MultiTriggerPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
